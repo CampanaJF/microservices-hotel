@@ -1,0 +1,30 @@
+services:
+    
+    hotels:
+        image: francocamp/hotels:latest
+        mem_limit: 800m
+        ports:
+            - "8080:8080"
+        networks:
+            - "inkwell-network"
+            
+
+    rooms:
+        image: francocamp/rooms:latest
+        mem_limit: 800m
+        ports:
+            - "8081:8081"
+        networks:
+            - "inkwell-network"
+            
+            
+    reservations:
+        image: francocamp/reservations:latest
+        mem_limit: 800m
+        ports:
+            - "8082:8082"
+        networks:
+            - "inkwell-network"
+            
+networks:
+    inkwell-network:
